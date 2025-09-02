@@ -6,7 +6,7 @@
 .hero {
   position: relative;
   height: var(--hero-height);
-  background-image: url(/fotos/bg-intro.jpg);
+  background-image: url("../fotos/bg-intro.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
