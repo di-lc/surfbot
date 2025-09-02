@@ -1,0 +1,81 @@
+/* ==========================
+   HEADER
+   ========================== */
+
+/* --- Header wrapper --- */
+.header {
+  width: 100%;
+  background-color: var(--color-strong);
+}
+
+.header .container {
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: var(--fs-button);
+  line-height: 1.4;
+}
+
+/* --- Logo --- */
+.logo {
+  height: clamp(28px, 4vw, 38px);
+}
+
+/* ==========================
+   MAIN NAVIGATION
+   ========================== */
+
+/* --- Navigation list --- */
+.main-nav ul {
+  display: flex;
+  gap: 46px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+/* --- Separator between items --- */
+.main-nav li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--color-text);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/* --- Navigation links --- */
+.main-nav a {
+  position: relative;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--fs-button);
+  transition: color 0.2s ease;
+}
+
+/* --- Hover underline animation --- */
+.main-nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-highlight);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}

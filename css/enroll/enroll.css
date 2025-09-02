@@ -1,0 +1,573 @@
+/* ==========================
+   UTILITY CLASS
+   ========================== */
+
+/* --- Screen reader only --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================
+   ENROLL SECTION
+   ========================== */
+
+/* --- Section wrapper --- */
+.enroll-section {
+  background-color: var(--color-surface);
+  background-image: url(../icones/bg-icones.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto;
+  padding-bottom: var(--margin-block);
+  position: relative;
+  font-family: var(--font-body);
+  z-index: 1;
+}
+
+/* --- Section title --- */
+.enroll-title {
+  background-color: var(--color-bg-light);
+  height: var(--enroll-title-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-horizontal);
+}
+
+.enroll-title h1 {
+  font-family: var(--font-title);
+  font-size: var(--fs-h1);
+  font-weight: 100;
+  color: var(--color-secondary);
+  line-height: var(--lh-title);
+}
+
+/* --- Container for form + sidebar --- */
+.enroll-section .container {
+  max-width: var(--max-width);
+  padding: 0 var(--padding-horizontal) 60px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   ENROLL CONTENT
+   ========================== */
+
+/* --- Form + Sidebar layout --- */
+.enroll-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap-large);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-horizontal) 60px;
+  flex-wrap: wrap;
+}
+
+/* ==========================
+   ENROLL FORM
+   ========================== */
+
+/* --- Form wrapper --- */
+.enroll-form {
+  flex: 1;
+  min-width: 0;
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+  margin-top: 60px;
+}
+
+/* --- Form labels --- */
+.enroll-form label {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 5px;
+}
+
+/* --- Form inputs --- */
+.enroll-form input {
+  background-color: var(--color-bg-light);
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  height: var(--input-height);
+  box-shadow: var(--shadow-light);
+  border-radius: var(--border-radius);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  padding: var(--padding-input);
+  color: var(--color-secondary);
+}
+
+.enroll-form input::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+.enroll-form input:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px var(--color-focus);
+}
+
+/* --- Form rows (2-column inputs) --- */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-small);
+  margin-top: 15px;
+}
+
+.form-row .form-col {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================
+   PAYMENT SECTION
+   ========================== */
+
+/* --- Section wrapper --- */
+.payment-section {
+  margin-top: var(--margin-block);
+}
+
+/* --- Section title --- */
+.payment-title {
+  color: var(--color-primary);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-top: var(--margin-block);
+  position: relative;
+  padding-bottom: var(--margin-mini);
+}
+
+.payment-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--separator-thickness);
+  background-color: var(--color-bg-light);
+}
+
+/* --- Payment method buttons --- */
+.payment-selector {
+  display: flex;
+  gap: 0;
+  margin: 12px 0 24px;
+}
+
+.payment-option {
+  width: var(--payment-option-width);
+  height: 50px;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  background-color: var(--color-bg-light);
+  color: var(--color-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0 16px;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-light);
+  transition: background-color var(--transition-fast);
+  user-select: none;
+}
+
+/* --- Rounded corners for last button --- */
+.payment-option:last-child {
+  border-radius: var(--border-radius);
+}
+
+/* --- Hide radio input --- */
+.payment-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Radio indicator --- */
+.radio-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* --- Selected state --- */
+.payment-option.active .radio-indicator {
+  border: 5px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.payment-option.active .radio-indicator::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.payment-option.active {
+  background-color: var(--color-selected);
+  color: var(--color-secondary);
+}
+
+/* --- Payment input data layout --- */
+.payment-data {
+  position: relative;
+  margin-bottom: var(--gap-medium);
+}
+
+.payment-data::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: var(--separator-thickness);
+  background-color: var(--color-bg-light);
+}
+
+.payment-data .form-row {
+  margin-bottom: var(--gap-medium);
+}
+
+.expiration-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+.expiration-selects {
+  display: flex;
+  gap: var(--gap-small);
+  font-size: var(--fs-small);
+}
+
+/* --- Select dropdowns --- */
+select {
+  background-color: var(--color-bg-light);
+  border: none;
+  outline: none;
+  height: var(--input-height);
+  width: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  padding: 0px 20px;
+  color: var(--color-placeholder);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-image: url("/icones/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 36px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px var(--color-focus);
+}
+
+.select-small {
+  width: 140px;
+}
+
+/* ==========================
+   ENROLL BUTTONS
+   ========================== */
+
+/* --- Main enroll button --- */
+.btn-enroll {
+  width: var(--button-width-contact);
+  margin-left: 0;
+  height: var(--button-height);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.btn-enroll img {
+  margin-left: var(--margin-mini);
+}
+
+.btn-enroll:hover {
+  background-color: var(--color-primary);
+  transition: var(--transition-fast);
+}
+
+/* --- Payment security info --- */
+.payment-security {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-mini);
+  font-size: var(--fs-small);
+  color: var(--color-text-secundary);
+}
+
+/* ==========================
+   SIDEBAR
+   ========================== */
+
+/* --- Sidebar wrapper --- */
+.enroll-sidebar-wrapper {
+  width: 100%;
+  max-width: 430px;
+  height: var(--sidebar-height);
+  background-color: var(--color-bg-light);
+  padding: var(--gap-medium);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--gap-medium);
+  flex-shrink: 0;
+  margin-top: 60px;
+}
+
+/* --- Sidebar content --- */
+.enroll-sidebar {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+/* --- Plan selector inside sidebar --- */
+.plan-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.plan-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 50px;
+  background-color: var(--color-bg-light);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-base);
+  color: var(--color-secondary);
+  position: relative;
+  user-select: none;
+  text-align: center;
+}
+
+.plan-option:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.plan-option:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.plan-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plan-option .radio-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.plan-option.active .radio-indicator {
+  border: 5px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.plan-option.active .radio-indicator::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plan-option.active {
+  background-color: var(--color-selected);
+  color: var(--color-secondary);
+}
+
+/* ==========================
+   LESSON BOX
+   ========================== */
+
+/* --- Lesson box wrapper --- */
+.lesson-box {
+  position: relative;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: var(--padding-card-class);
+  margin-top: var(--margin-block);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Surfbot icon --- */
+.lesson-box .surfbot-icon {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* --- Lesson title --- */
+.lesson-box h2 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-top: var(--margin-block);
+}
+
+/* --- Lesson list --- */
+.lesson-box ul {
+  margin: var(--margin-block) 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.lesson-box li {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-secondary);
+  margin-bottom: var(--margin-mini);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lesson-box li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--color-highlight);
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* --- Lesson price --- */
+.lesson-box p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-top: var(--margin-mini);
+}
+
+/* --- Decorative separators --- */
+.lesson-box ul::before,
+.lesson-box ul::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--separator-thickness);
+  background-color: var(--color-bg-light);
+}
+
+.lesson-box ul::before {
+  top: var(--separator-offset-small);
+}
+
+.lesson-box ul::after {
+  bottom: var(--separator-offset-small);
+}
+
+/* ==========================
+   CONFIRMATION MESSAGE
+   ========================== */
+
+/* --- Confirmation box --- */
+.confirmation-message {
+  display: none;
+  background: linear-gradient(
+    135deg,
+    var(--color-confirm-gradient-start),
+    var(--color-confirm-gradient-end)
+  );
+  color: var(--color-confirm-text);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: var(--transition-slow);
+}
+
+.confirmation-message.show {
+  display: block;
+  opacity: 1;
+}

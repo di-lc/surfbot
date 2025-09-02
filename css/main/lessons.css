@@ -1,0 +1,247 @@
+/* ==========================
+   LESSON INFO
+   ========================== */
+
+/* --- Lesson wrapper --- */
+.lesson-info {
+  background-color: var(--color-bg-light);
+  width: 100%;
+  padding-bottom: var(--margin-block);
+}
+
+.lessons {
+  position: relative;
+}
+
+.lessons h1 {
+  justify-self: center;
+  font-family: var(--font-title);
+  font-size: var(--fs-h1);
+  font-weight: 100;
+  line-height: var(--lh-title);
+  padding-top: 65px;
+  margin-bottom: var(--margin-bottom);
+  color: var(--color-secondary);
+}
+
+/* --- Lessons container --- */
+.lessons-container {
+  height: auto;
+  max-width: var(--largura-max);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 25px var(--padding-horizontal) 0;
+  gap: var(--gap-medium);
+  width: 100%;
+}
+
+/* ==========================
+   LESSON CARDS
+   ========================== */
+
+/* --- Card base styles --- */
+.kids,
+.adult,
+.pro {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-card-class);
+  max-width: var(--card-class-width);
+  width: 100%;
+  min-height: var(--card-class-height);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: var(--shadow-light);
+}
+
+/* --- Card headings --- */
+.kids h2,
+.adult h2,
+.pro h2 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  color: var(--color-secondary);
+  line-height: var(--lh-base);
+  margin-top: var(--margin-block);
+  text-align: center;
+  position: relative;
+}
+
+/* ==========================
+   LESSON LISTS
+   ========================== */
+
+/* --- List wrapper --- */
+.lessons > div ul {
+  margin-top: var(--margin-top-ul);
+  position: relative;
+  margin-bottom: var(--margin-bottom);
+  padding-left: clamp(25px, 3vw, 35px);
+}
+
+/* --- List separators --- */
+.lessons ul::before {
+  content: "";
+  position: absolute;
+  top: var(--distancia-linha-separadora);
+  width: calc(100% - 50px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: var(--espessura-linha-separadora);
+  background-color: var(--color-bg-light);
+}
+
+.lessons ul::after {
+  content: "";
+  position: absolute;
+  bottom: var(--distancia-linha-separadora);
+  width: calc(100% - 50px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: var(--espessura-linha-separadora);
+  background-color: var(--color-bg-light);
+}
+
+/* --- List items --- */
+.lessons > div li {
+  justify-items: start;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-secondary);
+  line-height: var(--lh-base);
+  position: relative;
+}
+
+/* --- List custom bullet --- */
+.lessons div li::before {
+  content: "";
+  position: absolute;
+  left: var(--detail-position);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--color-highlight);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/* ==========================
+   CARD FOOTER
+   ========================== */
+
+/* --- Price text --- */
+.kids p,
+.adult p,
+.pro p {
+  margin-top: var(--margin-mini);
+  align-self: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: var(--lh-base);
+}
+
+/* ==========================
+   CTA BUTTON
+   ========================== */
+
+/* --- Button base --- */
+.btn-lesson {
+  width: 100%;
+  max-width: var(--button-width);
+  height: var(--button-height);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-button);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: var(--margin-block);
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- Button hover --- */
+.btn-lesson:hover {
+  background-color: var(--color-primary);
+  transition: 0.2s ease;
+}
+
+/* --- Button with icon --- */
+.btn-enroll img {
+  margin-left: var(--margin-mini);
+}
+
+/* ==========================
+   ICONS
+   ========================== */
+
+/* --- Card icons --- */
+.surfbot-icon {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--gap-icon);
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ==========================
+   DISCOUNT SECTION
+   ========================== */
+
+/* --- Discount wrapper --- */
+.discount {
+  width: 100%;
+  max-width: 1260px;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* --- Discount text --- */
+.lesson-info .discount p {
+  max-width: var(--discount-text-width);
+  width: 100%;
+  margin: 30px auto 0 auto;
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  line-height: var(--lh-base);
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+/* --- Discount highlight --- */
+.lesson-info .discount .highlight {
+  color: var(--color-highlight);
+  font-weight: 700;
+}
+
+/* --- Discount link --- */
+.lesson-info .discount .link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-highlight);
+  color: var(--color-secondary);
+}

@@ -1,0 +1,430 @@
+/* ==========================
+   INFO-BAR RESPONSIVE
+   ========================== */
+@media (max-width: 768px) {
+  /* --- Info-bar wrapper --- */
+  .info-bar {
+    min-height: var(--info-bar-height);
+    padding: var(--gap-small) var(--padding-horizontal);
+  }
+
+  /* --- Info-bar text --- */
+  .info-bar p {
+    font-size: var(--fs-small);
+    line-height: var(--lh-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .info-bar {
+    min-height: calc(var(--info-bar-height) + var(--gap-small));
+  }
+}
+
+/* ==========================
+   HERO RESPONSIVE
+   ========================== */
+@media (max-width: 1023px) {
+  /* --- Hero container --- */
+  .hero .container {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: end;
+    padding-bottom: var(--gap-large);
+  }
+
+  /* --- Hero title --- */
+  .hero h1 {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-bottom: var(--gap-medium);
+  }
+
+  /* --- Hero form wrapper --- */
+  .hero form {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Hero wrapper --- */
+  .hero {
+    height: auto;
+    padding-top: var(--gap-large);
+    padding-bottom: var(--gap-large);
+  }
+
+  /* --- Hero container --- */
+  .hero .container {
+    height: auto;
+    padding-bottom: var(--gap-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Hero title --- */
+  .hero h1 {
+    margin-bottom: var(--gap-medium);
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    text-align: center;
+  }
+
+  /* --- Hero form wrapper --- */
+  .hero form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    min-width: 180px;
+    box-shadow: none;
+  }
+
+  /* --- Hero form input & button --- */
+  .hero form input,
+  .hero form button {
+    width: 100%;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    border-radius: var(--border-radius);
+  }
+
+  .hero form button {
+    margin-top: var(--gap-small);
+  }
+}
+
+/* ==========================
+   BEACH RESPONSIVE
+   ========================== */
+@media (max-width: 1180px) {
+  .beach-info .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-large);
+    height: auto;
+    margin-top: var(--gap-large);
+    margin-bottom: var(--gap-large);
+  }
+
+  .beach-photo {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: var(--gap-medium);
+  }
+
+  .beach-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .beach-photo h3,
+  .beach-photo p {
+    margin: var(--gap-small) 0 0 0;
+    text-align: left;
+    position: static;
+  }
+
+  .gallery-photo {
+    margin: 0 auto;
+  }
+
+  .beach-details {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 var(--padding-horizontal);
+    text-align: left;
+  }
+
+  .beach-details h1 {
+    width: 100%;
+    text-align: center;
+    margin: var(--gap-large) auto var(--gap-medium);
+  }
+
+  .beach-details ul {
+    gap: var(--gap-large);
+    margin-bottom: var(--gap-large);
+  }
+
+  .beach-details ul li {
+    justify-content: flex-start;
+  }
+
+  .beach-details p {
+    text-align: left;
+    margin-bottom: var(--gap-large);
+  }
+
+  .first-beach-paragraph {
+    margin-top: var(--gap-medium);
+  }
+
+  .beach-details ul li::after,
+  .beach-details ul li:first-child::before {
+    display: none;
+  }
+
+  .beach-photo h3::before,
+  .beach-photo p::before {
+    display: none;
+  }
+
+  .beach-photo .map {
+    top: 340px;
+    width: clamp(200px, 50vw, 500px);
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .beach-photo h3,
+  .beach-photo p {
+    font-size: var(--fs-small);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .beach-details ul li {
+    gap: var(--gap-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .beach-details ul li img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .beach-details h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .beach-photo h3 {
+    font-size: var(--fs-h3);
+  }
+
+  .beach-photo p {
+    font-size: var(--fs-small);
+  }
+
+  .beach-photo img {
+    max-width: 100%;
+  }
+}
+
+/* ==========================
+   CONTACT RESPONSIVE
+   ========================== */
+@media (max-width: 1023px) {
+  .contact {
+    background-image: none;
+    padding: var(--gap-large) 0;
+    min-height: auto;
+  }
+
+  .contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-large);
+    height: auto;
+    padding: 0 var(--padding-horizontal);
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-width);
+  }
+
+  .contact h1 {
+    margin: var(--gap-large) auto var(--gap-medium);
+    padding: 0 var(--padding-horizontal);
+    font-size: var(--fs-h1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contact form,
+  .contact-info {
+    width: 100%;
+    max-width: 600px;
+    align-self: center;
+  }
+
+  .contact form {
+    order: 1;
+  }
+
+  .contact-info {
+    order: 2;
+  }
+
+  .contact-info div + div::before {
+    display: none;
+    content: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact form {
+    flex-direction: column;
+  }
+
+  .contact form input,
+  .contact form textarea,
+  .contact form button {
+    width: 100%;
+    margin: 0;
+    border-radius: var(--border-radius);
+  }
+
+  .contact form button {
+    margin-top: var(--gap-small);
+  }
+
+  .contact-info {
+    gap: var(--gap-medium);
+  }
+
+  .contact-info div {
+    padding-bottom: var(--gap-small);
+  }
+
+  .contact-info div + div::before {
+    top: -var(--gap-small);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .contact-info button img {
+    margin-left: var(--gap-mini);
+  }
+}
+
+/* ==========================
+   FOOTER RESPONSIVE
+   ========================== */
+@media (max-width: 400px) {
+  .footer p {
+    font-size: var(--fs-small);
+  }
+
+  .footer img {
+    max-width: 80px;
+  }
+}
+
+/* ==========================
+   ENROLL RESPONSIVE
+   ========================== */
+@media (max-width: 1120px) {
+  .enroll-content {
+    flex-direction: column;
+    gap: var(--gap-large);
+  }
+
+  .enroll-sidebar-wrapper {
+    order: -1;
+    margin: var(--gap-large) auto 0;
+    max-width: 430px;
+    width: 100%;
+  }
+
+  .enroll-form {
+    order: 0;
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: var(--gap-small);
+  }
+
+  .enroll-form .form-row {
+    flex-direction: column;
+  }
+
+  .enroll-form input,
+  .enroll-form select,
+  .enroll-form textarea,
+  .btn-enroll {
+    width: 100%;
+    margin: 0;
+    height: var(--input-height-enroll);
+    padding: var(--padding-input);
+    border-radius: var(--border-radius);
+  }
+
+  .btn-enroll {
+    margin-top: var(--gap-medium);
+  }
+}
+
+@media (max-width: 768px) {
+  .enroll-content {
+    padding: 0 var(--padding-horizontal);
+  }
+
+  .enroll-sidebar-wrapper {
+    padding: var(--gap-small);
+  }
+
+  .enroll-form {
+    padding: 0 var(--padding-horizontal);
+  }
+
+  .payment-data .form-row {
+    flex-direction: column;
+    gap: var(--gap-small);
+  }
+
+  .expiration-selects {
+    flex-direction: row;
+    gap: var(--gap-small);
+    flex-wrap: wrap;
+  }
+
+  select.select-small {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .enroll-sidebar-wrapper {
+    max-width: 100%;
+  }
+
+  .enroll-form input,
+  .enroll-form select,
+  .enroll-form textarea,
+  .btn-enroll {
+    font-size: var(--fs-small);
+    height: var(--input-height-enroll);
+  }
+
+  .btn-enroll {
+    height: var(--button-height);
+  }
+
+  .lesson-box h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .lesson-box li {
+    font-size: var(--fs-small);
+  }
+
+  .payment-section {
+    margin-top: var(--gap-medium);
+  }
+}

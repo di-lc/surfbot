@@ -1,0 +1,127 @@
+/* ==========================
+   HERO
+   ========================== */
+
+/* --- Hero wrapper --- */
+.hero {
+  position: relative;
+  height: var(--hero-height);
+  background-image: url(/fotos/bg-intro.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+/* --- Hero container --- */
+.hero .container {
+  height: var(--hero-height);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+  width: 100%;
+  max-width: var(--largura-max);
+  padding: 0 var(--padding-horizontal) 60px var(--padding-horizontal);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hero title --- */
+.hero h1 {
+  grid-column: span 5;
+  justify-self: start;
+  font-family: var(--font-title);
+  font-size: var(--fs-h1-hero);
+  font-weight: 100;
+  line-height: 1;
+  margin-bottom: -6px;
+  animation: aparecerDeBaixo 0.8s ease-out forwards;
+}
+
+/* --- Hero form wrapper --- */
+.hero form {
+  grid-column: 8 / -1;
+  justify-self: end;
+  display: flex;
+  width: var(--tamanho-input);
+  box-shadow: var(--sombra-hero);
+  animation: entrarDaDireita 0.8s ease-out forwards;
+}
+
+/* --- Hero form input --- */
+.hero form input {
+  padding-left: var(--padding-input);
+  width: var(--input-width-hero);
+  height: var(--input-height-hero);
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-button);
+  background-color: var(--color-surface);
+  border: none;
+  border-right: none;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.hero form input:focus {
+  outline: none;
+  box-shadow: inset 0 0 4px var(--color-focus);
+}
+
+.hero form input::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+/* --- Hero form button --- */
+.hero form button {
+  margin: 0;
+  width: var(--button-width-hero);
+  height: var(--button-height-hero);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-button);
+  background-color: var(--color-highlight);
+  color: var(--color-text);
+  border: none;
+  border-left: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+}
+
+.hero form button img {
+  margin-left: var(--margin-mini);
+  align-content: center;
+}
+
+.hero form button:hover {
+  background-color: var(--color-highlight-hover);
+  transition: 0.2s ease;
+}
+
+/* --- Hero animations --- */
+@keyframes aparecerDeBaixo {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrarDaDireita {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

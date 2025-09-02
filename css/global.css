@@ -1,0 +1,35 @@
+/* ==========================
+   GLOBAL RESET
+   ========================== */
+
+/* --- Universal selector --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Anchor links --- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Unordered lists --- */
+ul {
+  list-style: none;
+}
+
+/* ==========================
+   DEFAULT CONTAINER
+   ========================== */
+
+/* --- Container wrapper --- */
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 45px;
+  width: 100%;
+}

@@ -1,0 +1,171 @@
+/* ==========================
+   BEACH INFO
+   ========================== */
+
+/* --- Beach container --- */
+.beach-info .container {
+  max-width: var(--largura-max);
+  height: 1120px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: var(--gap-large);
+  gap: 110px;
+}
+
+/* --- Beach photo wrapper --- */
+.beach-photo {
+  grid-column: span 6;
+  justify-self: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Beach photo title --- */
+.beach-photo h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  margin-top: 150px;
+  margin-bottom: var(--gap-mini);
+  left: 40px;
+  padding-left: 0;
+  position: relative;
+}
+
+.beach-photo h3::before {
+  content: "";
+  position: absolute;
+  left: var(--detail-position);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--color-highlight);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/* --- Beach photo description --- */
+.beach-photo p {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-text-secundary);
+  line-height: var(--lh-base);
+  left: 40px;
+  padding-left: 0;
+  position: relative;
+}
+
+.beach-photo p::before {
+  content: "";
+  position: absolute;
+  left: var(--detail-position);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 1.5px;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.beach-photo p strong {
+  color: var(--color-strong);
+}
+
+/* --- Gallery photo --- */
+.gallery-photo {
+  display: block;
+  width: clamp(300px, 60vw, 570px);
+  height: auto;
+}
+
+/* --- Beach map --- */
+.beach-photo .map {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: var(--border-radius);
+  z-index: 2;
+  box-shadow: var(--shadow-light);
+}
+
+/* --- Beach details --- */
+.beach-details {
+  width: 100%;
+  max-width: 550px;
+  grid-column: span 5;
+  justify-self: end;
+}
+
+.beach-details h1 {
+  width: 550px;
+  font-family: var(--font-title);
+  font-size: var(--fs-h1);
+  font-weight: 100;
+  line-height: var(--lh-title);
+  margin-bottom: var(--gap-large);
+}
+
+/* --- Beach details list --- */
+.beach-details ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.beach-details ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 0;
+  font-size: var(--fs-base);
+  font-family: var(--font-body);
+  font-weight: 100;
+}
+
+.beach-details ul li img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  display: block;
+}
+
+.beach-details ul li:first-child::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: var(--separator-thickness);
+  background-color: var(--color-bg-light);
+}
+
+.beach-details ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: var(--separator-thickness);
+  background-color: var(--color-bg-light);
+}
+
+/* --- Beach details text --- */
+.beach-details p {
+  font-size: var(--fs-base);
+  font-family: var(--font-body);
+  font-weight: 100;
+  line-height: var(--lh-base);
+}
+
+.first-beach-paragraph {
+  margin-top: var(--margin-block);
+  margin-bottom: var(--gap-small);
+}

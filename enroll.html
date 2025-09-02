@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll - Surfbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html"><img class="logo" src="./icones/surfbot-logo.svg" alt="Logo Surfbot"></a>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <nav class="main-nav" aria-label="Menu principal">
+        <button class="menu-close" aria-label="Fechar menu">&times;</button>
+        <ul>
+          <li><a href="#">Praia</a></li>
+          <li><a href="#">Aulas</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="enroll.html">Matricule-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="enroll-section">
+      <div class="enroll-title">
+        <h1>Matricule-se</h1>
+      </div>
+
+      <div class="container">
+        <div class="enroll-content">
+          <div class="confirmation-message" style="display:none;"></div>
+          <form class="enroll-form">
+            <!-- Dados Pessoais -->
+            <label for="name" class="sr-only">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Nome" required />
+
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+
+            <label for="cpf" class="sr-only">CPF</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="address" class="sr-only">Endereço</label>
+                <input type="text" id="address" name="address" placeholder="Endereço" required />
+              </div>
+              <div class="form-col">
+                <label for="zip" class="sr-only">CEP</label>
+                <input type="text" id="zip" name="zip" placeholder="00.000-000" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="state" class="sr-only">Estado</label>
+                <input type="text" id="state" name="state" placeholder="Estado" required />
+              </div>
+              <div class="form-col">
+                <label for="city" class="sr-only">Cidade</label>
+                <input type="text" id="city" name="city" placeholder="Cidade" required />
+              </div>
+            </div>
+
+            <!-- Seção de Pagamento -->
+            <div class="payment-section">
+              <h3 class="payment-title">Forma de Pagamento</h3>
+
+              <div class="payment-selector">
+                <label class="payment-option active">
+                  <input type="radio" name="payment-method" value="credit-card" checked />
+                  <span class="radio-indicator"></span>
+                  Cartão de Crédito
+                </label>
+              </div>
+
+              <div class="payment-data">
+                <div class="form-row">
+                  <div class="form-col">
+                    <label for="card-name" class="sr-only">Nome no Cartão</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Nome impresso no cartão" />
+                  </div>
+                  <div class="form-col expiration-pair">
+                    <label class="sr-only">Data de Expiração</label>
+                    <div class="expiration-selects">
+                      <select id="month" name="month" class="select-small">
+                        <option value="">Mês</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <select id="year" name="year" class="select-small">
+                        <option value="">Ano</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-col">
+                    <label for="card-number" class="sr-only">Número do Cartão</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" />
+                  </div>
+                  <div class="form-col">
+                    <label for="security-code" class="sr-only">Código de Segurança</label>
+                    <input type="text" id="security-code" name="security-code" placeholder="XXX" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="payment-info">Seu cartão será debitado em R$ 49,00</p>
+
+            <button type="submit" class="btn-enroll">
+              REALIZAR MATRÍCULA
+            </button>
+            <div class="payment-security">
+              <img src="./icones/cadeado.svg" alt="">
+              <p> Informações seguras e criptografadas</p>
+            </div>
+          </form>
+
+          <!-- Seção lateral com seleção de plano -->
+          <div class="enroll-sidebar-wrapper">
+            <aside class="enroll-sidebar">
+              <div class="plan-selector">
+                <label class="plan-option active">
+                  <input type="radio" name="plan" value="kids" checked />
+                  <span class="radio-indicator"></span>
+                  Infantil
+                </label>
+                <label class="plan-option">
+                  <input type="radio" name="plan" value="adult" />
+                  <span class="radio-indicator"></span>
+                  Adulto
+                </label>
+                <label class="plan-option">
+                  <input type="radio" name="plan" value="pro" />
+                  <span class="radio-indicator"></span>
+                  Profissional
+                </label>
+              </div>
+
+              <div class="lesson-box" id="plan-details">
+                <div class="surfbot-icon">
+                  <img src="./icones/surfbot-icon.svg" alt="Ícone Surfbot" />
+                </div>
+                <h2>INFANTIL</h2>
+                <ul>
+                  <li>Público entre 5 e 15 anos</li>
+                  <li>Equipamentos fornecidos</li>
+                  <li>Horários de Sex. à Sab.</li>
+                  <li>2 horas seguidas de aula</li>
+                </ul>
+                <p>R$ 49,00 / Aula</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Surfnet 2025 - Alguns direitos reservados.</p>
+      <img src="./icones/surfbot-icon-white.svg" alt="Ícone branco">
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

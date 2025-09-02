@@ -1,0 +1,31 @@
+/* Geral */
+@import "./global.css";
+
+/* Utilidades */
+@import "./tokens/components.css";
+@import "./tokens/tokens.css";
+
+/* Info-bar */
+@import "./info-bar.css";
+
+/* Hamburguer */
+@import "./hamb-menu.css";
+
+/* Header */
+@import "./header.css";
+
+/* Main */
+@import "./main/hero.css";
+@import "./main/beach.css";
+@import "./main/lessons.css";
+@import "./main/quote.css";
+@import "./main/contact.css";
+
+/* Footer */
+@import "./footer.css";
+
+/* Enroll */
+@import "./enroll/enroll.css";
+
+/* Responsive */
+@import "./responsive.css";

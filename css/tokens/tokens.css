@@ -1,0 +1,115 @@
+:root {
+  /* COLORS */
+  --color-primary: #1188ee;
+  --color-secondary: #445566;
+  --color-text: #fafafa;
+  --color-text-secundary: #99aabb;
+  --color-strong: #17222d;
+  --color-highlight: #ff3726;
+  --color-highlight-hover: #ba1608;
+  --color-bg-light: #eff4f9;
+  --color-on: #16c70b;
+  --color-focus: #00c896;
+  --color-placeholder: #a0b2c4;
+  --color-surface: #fafafa;
+  --color-shadow: rgba(187, 204, 221, 0.15);
+  --color-shadow-1: rgba(0, 0, 0, 0.1);
+  --color-shadow-2: rgba(0, 0, 0, 0.25);
+
+  /* NEW COLORS */
+  --color-selected: #bbccdd;
+  --color-confirm-gradient-start: #6dd5fa;
+  --color-confirm-gradient-end: #ffffff;
+  --color-confirm-border: #4da6ff;
+  --color-confirm-text: #003366;
+
+  /* FONTS */
+  --font-title: "Alice", serif;
+  --font-body: "Nunito", sans-serif;
+
+  /* FONT SIZES */
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);
+  --fs-h1-hero: clamp(3.5rem, 6vw, 5rem);
+  --fs-h2: clamp(1.25rem, 2vw, 2rem);
+  --fs-h3: clamp(1rem, 1.8vw, 1.5rem);
+  --fs-base: clamp(1rem, 1.5vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-button: clamp(0.875rem, 1.5vw, 1.125rem);
+
+  /* LINE HEIGHTS */
+  --lh-base: 1.75;
+  --lh-title: 1;
+
+  /* WIDTHS */
+  --max-width: 1260px;
+  --input-width: min(100%, 470px);
+  --map-width: 520px;
+  --discount-text-width: 300px;
+  --button-width: clamp(160px, 20vw, 230px);
+  --button-width-contact: clamp(200px, 20vw, 230px);
+  --button-width-hero: clamp(180px, 15vw, 230px);
+  --input-width-hero: clamp(220px, 30vw, 300px);
+  --input-width-enroll: clamp(220px, 30vw, 300px);
+  --blocoquote-width: clamp(300px, 50vw, 640px);
+  --card-class-width: clamp(280px, 30vw, 370px);
+  --payment-option-width: 206px;
+
+  /* HEIGHTS */
+  --contact-height: 400px;
+  --form-element-height: 50px;
+  --input-height: clamp(45px, 6vw, 50px);
+  --textarea-height: clamp(120px, 20vw, 180px);
+  --info-bar-height: 30px;
+  --hero-height: clamp(300px, 80vh, 400px);
+  --quote-height: 480px;
+  --card-class-height: clamp(340px, 50vw, 414px);
+  --button-height: clamp(38px, 5vw, 45px);
+  --button-height-hero: clamp(40px, 5vw, 50px);
+  --input-height-enroll: clamp(40px, 5vw, 50px);
+  --enroll-title-height: 120px;
+  --sidebar-height: 586px;
+
+  /* RADIUS & SHADOW */
+  --border-radius: 4px;
+  --shadow-light: 0px 2px 2px 0px var(--color-shadow);
+  --shadow-strong: 0 10px 25px var(--color-shadow-2);
+  --shadow-medium: 0 4px 10px var(--color-shadow-1);
+
+  /* GAPS */
+  --gap-large: clamp(30px, 5vw, 60px);
+  --gap-medium: clamp(20px, 2vw, 40px);
+  --gap-small: 15px;
+  --gap-mini: 5px;
+  --gap-icon: 8px;
+
+  /* MARGINS */
+  --margin-center: 0 auto;
+  --margin-center-top: 30px auto 0 auto;
+  --margin-h1-contact: 90px auto 60px auto;
+  --margin-top-ul: 60px;
+  --margin-block: 45px;
+  --margin-bottom: 45px;
+  --margin-h2-card: 40px;
+  --margin-button-top: 30px;
+  --margin-top: 30px;
+  --margin-mini: 15px;
+
+  /* PADDING */
+  --padding-horizontal: clamp(15px, 4vw, 45px);
+  --padding-footer: 30px 0;
+  --padding-input: 20px;
+  --padding-card-class: 40px 25px 30px;
+
+  /* SEPARATOR LINE */
+  --separator-thickness: 2px;
+  --separator-offset: -30px;
+  --separator-offset-small: -20px;
+
+  /* DECORATIVE */
+  --detail-position: -15px;
+
+  /* TRANSITIONS */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}

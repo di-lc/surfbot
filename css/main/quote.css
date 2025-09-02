@@ -1,0 +1,49 @@
+/* ==========================
+   QUOTE SECTION
+   ========================== */
+
+/* --- Quote wrapper --- */
+.quote {
+  position: relative;
+  height: var(--quote-height);
+  background-image: url(/fotos/foto-quote.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+/* --- Quote container --- */
+.quote .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: var(--largura-max);
+}
+
+/* --- Blockquote text --- */
+blockquote {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: var(--blocoquote-width);
+  font-family: var(--font-title);
+  font-size: var(--fs-h1);
+  font-weight: 100;
+  line-height: var(--lh-title);
+  color: var(--color-text);
+}
+
+/* --- Blockquote citation --- */
+blockquote cite {
+  font-size: var(--fs-base);
+  font-style: normal;
+  font-family: var(--font-body);
+  font-weight: 500;
+  margin-top: var(--margin-top);
+}

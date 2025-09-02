@@ -1,0 +1,27 @@
+/* ==========================
+   FOOTER
+   ========================== */
+
+/* --- Footer wrapper --- */
+.footer {
+  background-color: var(--color-primary);
+  padding: 30px 0;
+}
+
+/* --- Footer container --- */
+.footer .container {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Footer text --- */
+.footer p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 0.875rem;
+}

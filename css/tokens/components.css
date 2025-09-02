@@ -1,0 +1,18 @@
+.wave-separator {
+  position: relative;
+  width: 100%;
+  height: 80px; /* altura visível da onda */
+  margin-top: -40px; /* puxa a onda pra cima da section anterior */
+  margin-bottom: -40px; /* puxa pra cima da próxima section também */
+  z-index: 10;
+  overflow: visible;
+}
+
+.wave-separator img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  pointer-events: none;
+}
