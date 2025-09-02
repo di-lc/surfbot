@@ -192,6 +192,18 @@
     margin-right: 0;
   }
 
+  .beach-photo .map {
+    position: relative;   
+    top: auto;            
+    left: auto;           
+    transform: none;      
+    width: 90%;           
+    max-width: 500px;     
+    margin: var(--gap-medium) auto 0 auto; 
+    height: auto;         
+    z-index: 1; 
+  }
+
   .beach-details ul li {
     gap: var(--gap-medium);
   }
@@ -219,6 +231,28 @@
     max-width: 100%;
   }
 }
+
+/* ==========================
+   LESSONS RESPONSIVE
+   ========================== */
+@media (max-width: 768px) {
+  .lessons h1 {
+    text-align: center;      
+    width: 100%;            
+    margin-top: var(--gap-large);   
+    margin-bottom: var(--gap-medium); 
+  }
+
+  .lessons-container {
+    grid-template-columns: 1fr; 
+    gap: var(--gap-medium);
+  }
+
+  .lessons ul {
+    padding-left: 20px; 
+  }
+}
+
 
 /* ==========================
    CONTACT RESPONSIVE
