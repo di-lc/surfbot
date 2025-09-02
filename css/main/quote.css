@@ -6,7 +6,7 @@
 .quote {
   position: relative;
   height: var(--quote-height);
-  background-image: url(/fotos/foto-quote.jpg);
+  background-image: url("/fotos/foto-quote.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,3 +47,4 @@ blockquote cite {
   font-weight: 500;
   margin-top: var(--margin-top);
 }
+
