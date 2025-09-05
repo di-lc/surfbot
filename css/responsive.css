@@ -4,8 +4,9 @@
 @media (max-width: 768px) {
   /* --- Info-bar wrapper --- */
   .info-bar {
-    min-height: var(--info-bar-height);
-    padding: var(--gap-small) var(--padding-horizontal);
+  min-height: 20px;
+  line-height: 1.1;
+  padding: 4px 4px;
   }
 
   /* --- Info-bar text --- */
@@ -193,15 +194,15 @@
   }
 
   .beach-photo .map {
-    position: relative;   
-    top: auto;            
-    left: auto;           
-    transform: none;      
-    width: 90%;           
-    max-width: 500px;     
-    margin: var(--gap-medium) auto 0 auto; 
-    height: auto;         
-    z-index: 1; 
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 500px;
+    margin: var(--gap-medium) auto 0 auto;
+    height: auto;
+    z-index: 1;
   }
 
   .beach-details ul li {
@@ -233,26 +234,49 @@
 }
 
 /* ==========================
+  SEPARATOR
+   ========================== */
+@media (max-width: 768px) {
+.wave-separator img {
+  top: 80%;
+  transform: translate(-40%, -40%);
+}
+}
+
+/* ==========================
    LESSONS RESPONSIVE
    ========================== */
 @media (max-width: 768px) {
   .lessons h1 {
-    text-align: center;      
-    width: 100%;            
-    margin-top: var(--gap-large);   
-    margin-bottom: var(--gap-medium); 
+    text-align: center;
+    width: 100%;
+    margin-top: var(--gap-large);
+    margin-bottom: var(--gap-medium);
   }
 
   .lessons-container {
-    grid-template-columns: 1fr; 
-    gap: var(--gap-medium);
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+   .lessons-container h2 {
+    margin-top: var(--margin-mini);
   }
 
   .lessons ul {
-    padding-left: 20px; 
+    padding-left: 20px;
   }
+
+  .lessons > div ul {
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-mini);
 }
 
+.kids p,
+.adult p,
+.pro p {
+  margin-bottom: 0px;
+}
 
 /* ==========================
    CONTACT RESPONSIVE
@@ -428,6 +452,11 @@
     flex-wrap: wrap;
   }
 
+    .enroll-sidebar-wrapper {
+    width: 80%;
+    height: 530px;
+  }
+
   select.select-small {
     width: 100%;
   }
@@ -435,7 +464,11 @@
 
 @media (max-width: 480px) {
   .enroll-sidebar-wrapper {
-    max-width: 100%;
+    width: 80%;
+    height: 450px;
+  }
+  .payment-security p {
+    font-size: var(--fs-x-small);
   }
 
   .enroll-form input,
@@ -460,5 +493,14 @@
 
   .payment-section {
     margin-top: var(--gap-medium);
+  }
+
+  .plan-option {
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .lesson-box h2 {
+    margin-top: var(--margin-mini);
   }
 }

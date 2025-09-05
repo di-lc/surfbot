@@ -220,11 +220,16 @@
   box-sizing: border-box;
 }
 
+.lesson-info .discount {
+  display: flex;
+  justify-content: center;
+}
+
 /* --- Discount text --- */
 .lesson-info .discount p {
   max-width: var(--discount-text-width);
   width: 100%;
-  margin: 30px auto 0 auto;
+  margin: 30px 0 0 0;
   font-family: var(--font-body);
   font-size: var(--fs-small);
   font-weight: 500;

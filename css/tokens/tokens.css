@@ -34,6 +34,7 @@
   --fs-h3: clamp(1rem, 1.8vw, 1.5rem);
   --fs-base: clamp(1rem, 1.5vw, 1.125rem);
   --fs-small: 0.875rem;
+  --fs-x-small: 0.675rem;
   --fs-button: clamp(0.875rem, 1.5vw, 1.125rem);
 
   /* LINE HEIGHTS */
@@ -67,7 +68,8 @@
   --button-height-hero: clamp(40px, 5vw, 50px);
   --input-height-enroll: clamp(40px, 5vw, 50px);
   --enroll-title-height: 120px;
-  --sidebar-height: 586px;
+  --sidebar-height: 586px ;
+
 
   /* RADIUS & SHADOW */
   --border-radius: 4px;
@@ -86,9 +88,9 @@
   --margin-center: 0 auto;
   --margin-center-top: 30px auto 0 auto;
   --margin-h1-contact: 90px auto 60px auto;
-  --margin-top-ul: 60px;
+  --margin-top-ul: 45px;
   --margin-block: 45px;
-  --margin-bottom: 45px;
+  --margin-bottom: 40px;
   --margin-h2-card: 40px;
   --margin-button-top: 30px;
   --margin-top: 30px;

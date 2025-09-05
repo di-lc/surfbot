@@ -380,7 +380,6 @@ select:focus {
 .plan-selector {
   display: flex;
   justify-content: center;
-  gap: 10px;
 }
 
 .plan-option {
@@ -409,6 +408,10 @@ select:focus {
 
 .plan-option:last-child {
   border-radius: 0 8px 8px 0;
+}
+
+.plan-option:nth-child(2) {
+  border-radius: 0;
 }
 
 .plan-option input[type="radio"] {
@@ -490,9 +493,10 @@ select:focus {
 
 /* --- Lesson list --- */
 .lesson-box ul {
-  margin: var(--margin-block) 0;
+  margin: var(--margin-h2-card) 0;
   padding-left: 0;
   list-style: none;
+  margin-bottom: var(--margin-mini);
 }
 
 .lesson-box li {
