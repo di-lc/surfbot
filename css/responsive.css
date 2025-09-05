@@ -453,8 +453,8 @@
   }
 
     .enroll-sidebar-wrapper {
-    width: 80%;
-    height: 530px;
+    width: 100%;
+    height: 510px;
   }
 
   select.select-small {
@@ -463,10 +463,6 @@
 }
 
 @media (max-width: 480px) {
-  .enroll-sidebar-wrapper {
-    width: 80%;
-    height: 450px;
-  }
   .payment-security p {
     font-size: var(--fs-x-small);
   }
