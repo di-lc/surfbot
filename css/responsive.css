@@ -239,7 +239,7 @@
 @media (max-width: 768px) {
 .wave-separator img {
   top: 80%;
-  transform: translate(-40%, -40%);
+  transform: translate(-50%, -50%);
 }
 }
 
