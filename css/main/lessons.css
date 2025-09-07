@@ -56,6 +56,7 @@
   border-radius: var(--border-radius);
   position: relative;
   box-shadow: var(--shadow-light);
+  align-items: center;
 }
 
 /* --- Card headings --- */
@@ -81,7 +82,9 @@
   margin-top: var(--margin-top-ul);
   position: relative;
   margin-bottom: var(--margin-bottom);
-  padding-left: clamp(25px, 3vw, 35px);
+  padding-left: 0;
+  display: inline-block;
+  text-align: left;
 }
 
 /* --- List separators --- */

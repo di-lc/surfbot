@@ -49,34 +49,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const plans = {
     kids: {
-      title: "INFANTIL",
+      title: "KIDS",
       items: [
-        "Público entre 5 e 15 anos",
-        "Equipamentos fornecidos",
-        "Horários de Sex. à Sab.",
-        "2 horas seguidas de aula",
+        "Ages from 5 to 15 years",
+        "Gear provided",
+        "Friday to Saturday times",
+        "2 hours straight session",
       ],
-      price: "R$ 49,00 / Aula",
+      price: "$49.00 / Lesson",
     },
     adult: {
-      title: "ADULTO",
+      title: "ADULT",
       items: [
-        "Público entre 16 e 80 anos",
-        "Equipamentos fornecidos",
-        "Horários de Sex. à Sab.",
-        "3 horas seguidas de aula",
+        "Ages from 16 to 80 years",
+        "Gear provided",
+        "Friday to Saturday times",
+        "3 hours straight session",
       ],
-      price: "R$ 69,00 / Aula",
+      price: "$69.00 / Lesson",
     },
     pro: {
-      title: "PROFISSIONAL",
+      title: "PRO",
       items: [
-        "Experiência de 3 anos no surf",
-        "Você deve trazer o equipamento",
-        "Horários de Sex. à Sab.",
-        "4 horas seguidas de aula",
+        "3 years surfing experience",
+        "You must bring your gear",
+        "Friday to Saturday times",
+        "4 hours straight session",
       ],
-      price: "R$ 99,00 / Aula",
+      price: "$99.00 / Lesson",
     },
   };
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       iconContainer.appendChild(img);
     }
 
-    paymentInfo.textContent = `Seu cartão será debitado em ${plan.price}`;
+    paymentInfo.textContent = `Your card will be charged ${plan.price}`;
   }
 
   planOptions.forEach((option) => {
